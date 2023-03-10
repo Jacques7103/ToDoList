@@ -1,0 +1,207 @@
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background: #d3d3d3;
+	max-width: 500px;
+	width: 90%;
+	height: 35%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	border-radius: 8px;
+	position: relative;
+}
+
+.closeButton {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	transform: translateY(-100%);
+	font-size: 2.5rem;
+	padding: 0.5rem;
+	border-radius: 4px;
+	background: #d3d3d3;
+	color: var(--black-2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.3s ease all;
+	z-index: -1;
+}
+
+.closeButton:hover {
+	background-color: #e32525;
+	color: white;
+}
+
+.form {
+	width: 100%;
+	font-size: 1.6rem;	
+	color: black;
+	margin: 3.5rem 2rem 2rem 0rem;
+	padding: 1rem;
+	border: none;
+}
+
+.label{
+	margin-top: 2rem;
+}
+
+.forms {
+	width: 100%;
+	font-size: 1.6rem;	
+	color: black;
+	margin: 1rem 2rem -2rem 0rem;
+	padding: 1rem;
+	border: none;
+}
+
+.button {
+	display: inline;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2rem;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+	background-color: #a9a9a9;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.button2 {
+	display: inline;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2rem;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+	background-color: #a9a9a9;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-left: 35.3rem;
+}
+
+.cancel {
+	display: inline;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 2rem;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+	background-color: #a9a9a9;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: white;
+}
+
+.cancel:hover {
+	background-color: white;
+}
+
+.selection {
+	width: 107.5%;
+	font-size: 1.6rem;
+	color: black;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	margin-right: 4rem;
+	padding: 1rem;
+	padding-right: 3rem;
+	border: none;
+	cursor: pointer;
+}
+
+.selection2 {
+	width: 10%;
+	font-size: 1.3rem;
+	color: black;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	margin-left: 17.3rem;
+	padding: 0.5rem;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.title {
+	font-size: 3rem;
+	color: #696969;
+}
+
+.task-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4px auto;
+	color: #fff;
+	background: linear-gradient(
+		90deg,
+		rgba(128, 128, 128) 0%,
+		rgba(105, 105, 105) 100%
+	);
+	
+	padding: 16px;
+	border-radius: 5px;
+	width: 31.5%;
+}
+
+.delete {
+	margin-right: 5px;
+	color: #fff;
+	display: inline-block;
+	align-items: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.edit {
+	color: #fff;
+	display: inline-block;
+	align-items: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.checkbox {
+	flex-basis: 25px;
+	flex-shrink: 0;
+	height: 25px;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.3s ease background-color;
+}
+
+.txt {
+	font-size: 20px;
+}
+
+.checkbox:hover{
+	background-color: var(--grey-2);
+}
