@@ -9,8 +9,13 @@
 	margin: 0 auto;
 	margin-top: 2rem;
 	margin-bottom: 1.5rem;
+	position: absolute;
 	color: var(--black-1);
 	@media only screen and (max-width: 768px) {
 		font-size: 3rem;
   }
+}
+
+.data{
+	position: relative;
 }
