@@ -1,12 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Modal from './Modal';
 import Show from './Show';
+import '../styles/front.css';
+// import {collection, query, orderBy, onSnapshot, updateDoc, doc} from 'firebase/firestore';
+// import {fs} from '../firebase';
 
 function Front() {
   const [open, setOpen] = useState(false);
   const [task, setTask] = useState([]);
   const [isCheck, setCheck] = useState(false);
   const [filter, setFilter] = useState(false);
+
+  // useEffect(() => {
+  //   const q = query(collection(fs, 'tasks'), orderBy('created', 'desc'));
+  //   onSnapshot(q, (QuerySnapshot) => {
+  //     setTask(QuerySnapshot.docs.map(doc => ({
+  //       id: doc.id,
+  //       text: doc.text,
+  //       isCheck: doc.isCheck,
+  //     })))
+  //   })
+  // })
 
   const addTask = e => {
     if(!e.text || /^\s*$/.test(e.text)) {
@@ -35,12 +49,21 @@ function Front() {
     setTask(removeTasks);
   }
 
-  const editTask = (taskId, newTask) => {
+  const editTask = async(taskId, newTask) => {
     if(!newTask.text || /^\s*$/.test(newTask.text)) {
       return;
     }
-
+    
     setTask(prev => prev.map(item => (item.id === taskId ? newTask: item)));
+
+    // const updatetodo = doc(fs, 'tasks', taskId)
+    // try{
+    //   await updateDoc(updatetodo, {
+    //     text: newTask
+    //   })
+    // } catch(err) {
+    //   alert(err)
+    // }
   }
 
   const updateFilter = (e) => {
@@ -50,6 +73,7 @@ function Front() {
 
   return (
     <div>
+      <h2 className="title">To Do List</h2>
         <button className='button2' onClick={() => setOpen(true)}>Add Task</button>
         <select className='selection2' id='stat' value={filter} onChange={updateFilter}>
           <option value='all'>All</option>

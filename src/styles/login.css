@@ -1,0 +1,94 @@
+.login-wrapper {
+  margin-top: 14rem;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.login-form {
+  margin-left: 39%;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.texts {
+  margin-bottom: 0px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  margin-right: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.form-control {
+  width: 95%;
+  padding: 0.5rem;
+  padding-right: 1.3rem;
+  margin-left: 0.5rem;
+  /* margin-right: 1rem; */
+  margin-bottom: -10%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.primary, .btn-secondary {
+  width: 84%;
+  padding: 0.75rem;
+  margin-right: 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+  background-color: #eee;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.link-register {
+  margin-right: 10px;
+}
+
+.link-forgot-password {
+  margin-left: 10px;
+}

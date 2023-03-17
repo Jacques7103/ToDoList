@@ -165,7 +165,8 @@
 	
 	padding: 16px;
 	border-radius: 5px;
-	width: 31.5%;
+	width: 34.2%;
+	margin-left: 35.3rem;
 }
 
 .delete {
@@ -174,6 +175,7 @@
 	display: inline-block;
 	align-items: center;
 	font-size: 24px;
+	padding-bottom: 11.5px;
 	cursor: pointer;
 }
 
@@ -182,6 +184,7 @@
 	display: inline-block;
 	align-items: center;
 	font-size: 24px;
+	padding-bottom: 13px;
 	cursor: pointer;
 }
 
@@ -196,10 +199,12 @@
 	padding: 5px;
 	cursor: pointer;
 	transition: 0.3s ease background-color;
+	margin-top: 10px;
 }
 
 .txt {
 	font-size: 20px;
+	padding-bottom: 13px;
 }
 
 .checkbox:hover{

@@ -30,7 +30,7 @@ const Show = ({task, completeTask, removeTask, editTask, filter}) => {
                     <div className='icon'>
                         <RiCloseCircleLine onClick={() => removeTask(task.id)} className='delete'/>
                         <TiEdit onClick={() => {setEdit({id: task.id, value: task.text, stat: task.stat}); setModalOpen(true)}} className='edit'/>
-                        <Modal type='update' open={modalOpen} setOpen={setModalOpen} onSubmit={submitTask} task={task}></Modal>
+                        <Modal type='update' open={modalOpen} setOpen={setModalOpen} onSubmit={submitTask} task={task} editTask={editTask}></Modal>
                     </div>
                 </div>
             )
