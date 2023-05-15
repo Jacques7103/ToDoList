@@ -2,6 +2,8 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut, GoogleAuthProvider } from 'firebase/auth';
 import { query, getDocs, collection, where, addDoc } from 'firebase/firestore';
+import {v4 as uuid} from 'uuid';
+import Cookies from 'js-cookie';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCx2X9S6QaPzM0xhJKQUf5McunOJdW6eIY",
@@ -31,18 +33,22 @@ const signInWithGoogle = async () => {
         email: user.email,
       });
     }
+    const code = user.uid();
+    Cookies.set('Session Code', code, {expires: 1});
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
+    const code = uuid();
+    Cookies.set('Session Code', code, {expires: 1});
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 
@@ -59,7 +65,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     });
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 

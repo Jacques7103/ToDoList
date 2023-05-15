@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Modal from './Modal';
 import Show from './Show';
 import '../styles/front.css';
+import Cookies from 'js-cookie';
 // import {collection, query, orderBy, onSnapshot, updateDoc, doc} from 'firebase/firestore';
 // import {fs} from '../firebase';
 
@@ -28,6 +29,7 @@ function Front() {
     }
 
     const newTask = [e, ...task];
+    Cookies.set('Task Added', true, {expires: 7})
 
     setTask(newTask);
     console.log(newTask)
@@ -55,6 +57,8 @@ function Front() {
     }
     
     setTask(prev => prev.map(item => (item.id === taskId ? newTask: item)));
+
+    Cookies.set('Task Edited', true, {expires: 7})
 
     // const updatetodo = doc(fs, 'tasks', taskId)
     // try{
